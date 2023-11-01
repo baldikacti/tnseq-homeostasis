@@ -1,0 +1,119 @@
+SetName,Index,Group,Media,Condition_1,CCNA_00001,CCNA_00002,CCNA_00003,CCNA_00006,CCNA_00009,CCNA_00011
+Caulo_ML2_set4.IT024,IT024,stress,PYE,Aluminum chloride hydrate,0,70,38,36,31,9
+Caulo_ML2_set3.IT050,IT050,stress,PYE,Aluminum chloride hydrate,2,72,34,39,33,9
+Caulo_ML2_set4.IT029,IT029,stress,PYE,Bacitracin,0,6,8,0,1,9
+Caulo_ML2_set4.IT028,IT028,stress,PYE,Bacitracin,0,12,3,5,2,9
+Caulo_ML2_set3.IT055,IT055,stress,PYE,Bacitracin,2,26,10,12,8,9
+Caulo_ML2_set3.IT054,IT054,stress,PYE,Bacitracin,0,19,8,11,8,9
+Caulo_ML2_set4.IT021,IT021,stress,PYE,Benzalkonium Chloride,2,56,24,23,18,9
+Caulo_ML2_set3.IT047,IT047,stress,PYE,Benzalkonium Chloride,1,52,24,29,18,9
+Caulo_ML2_set3.IT048,IT048,stress,PYE,Benzalkonium Chloride,0,25,9,7,9,9
+Caulo_ML2_set4.IT023,IT023,stress,PYE,Benzalkonium Chloride,0,13,5,4,2,9
+Caulo_ML2_set4.IT022,IT022,stress,PYE,Benzalkonium Chloride,0,21,8,9,5,9
+Caulo_ML2_set3.IT049,IT049,stress,PYE,Benzalkonium Chloride,1,27,14,17,5,9
+Caulo_ML2_set3.IT044,IT044,stress,PYE,Benzethonium chloride,1,59,28,29,25,9
+Caulo_ML2_set4.IT018,IT018,stress,PYE,Benzethonium chloride,1,57,27,28,21,9
+Caulo_ML2_set3.IT045,IT045,stress,PYE,Benzethonium chloride,2,35,15,11,13,9
+Caulo_ML2_set4.IT020,IT020,stress,PYE,Benzethonium chloride,1,12,4,10,1,9
+Caulo_ML2_set3.IT046,IT046,stress,PYE,Benzethonium chloride,0,24,12,10,10,9
+Caulo_ML2_set4.IT019,IT019,stress,PYE,Benzethonium chloride,2,18,10,6,6,9
+Caulo_ML2_set3.IT072,IT072,stress,PYE,Carbenicillin disodium salt,5,70,30,32,27,9
+Caulo_ML2_set3.IT009,IT009,stress,PYE,Carbenicillin disodium salt,0,29,14,11,5,9
+Caulo_ML2_set3.IT008,IT008,stress,PYE,Carbenicillin disodium salt,0,70,34,26,27,9
+Caulo_ML2_set3.IT007,IT007,stress,PYE,Carbenicillin disodium salt,0,74,33,32,30,9
+Caulo_ML2_set3.IT073,IT073,stress,PYE,Carbenicillin disodium salt,1,33,16,15,7,9
+Caulo_ML2_set3.IT071,IT071,stress,PYE,Carbenicillin disodium salt,0,74,34,31,30,9
+Caulo_ML2_set3.IT065,IT065,stress,PYE,Chloramphenicol,4,66,32,34,30,9
+Caulo_ML2_set3.IT066,IT066,stress,PYE,Chloramphenicol,1,54,28,28,23,9
+Caulo_ML2_set3.IT001,IT001,stress,PYE,Chloramphenicol,4,66,33,35,24,9
+Caulo_ML2_set3.IT002,IT002,stress,PYE,Chloramphenicol,2,51,22,23,17,9
+Caulo_ML2_set3.IT029,IT029,stress,PYE,Cisplatin,0,37,16,17,16,9
+Caulo_ML2_set3.IT027,IT027,stress,PYE,Cisplatin,1,76,35,35,31,9
+Caulo_ML2_set4.IT002,IT002,stress,PYE,Cisplatin,1,73,31,35,28,9
+Caulo_ML2_set4.IT003,IT003,stress,PYE,Cisplatin,0,38,15,22,10,9
+Caulo_ML2_set3.IT028,IT028,stress,PYE,Cisplatin,0,76,34,32,29,9
+Caulo_ML2_set4.IT001,IT001,stress,PYE,Cisplatin,1,69,35,37,27,9
+Caulo_ML2_set3.IT081,IT081,stress,PYE,Cobalt chloride hexahydrate,3,69,35,34,32,9
+Caulo_ML2_set3.IT082,IT082,stress,PYE,Cobalt chloride hexahydrate,6,66,36,31,33,9
+Caulo_ML2_set3.IT018,IT018,stress,PYE,Cobalt chloride hexahydrate,9,69,37,32,31,9
+Caulo_ML2_set3.IT017,IT017,stress,PYE,Cobalt chloride hexahydrate,4,72,37,34,28,9
+Caulo_ML2_set3.IT057,IT057,stress,PYE,Dimethyl Sulfoxide,4,67,25,27,27,9
+Caulo_ML2_set3.IT056,IT056,stress,PYE,Dimethyl Sulfoxide,2,64,33,29,33,9
+Caulo_ML2_set4.IT030,IT030,stress,PYE,Dimethyl Sulfoxide,2,72,35,35,31,9
+Caulo_ML2_set4.IT031,IT031,stress,PYE,Dimethyl Sulfoxide,2,68,29,30,24,9
+Caulo_ML2_set3.IT063,IT063,stress,PYE,Doxycycline hyclate,1,55,30,28,22,9
+Caulo_ML2_set4.IT037,IT037,stress,PYE,Doxycycline hyclate,1,65,30,35,24,9
+Caulo_ML2_set3.IT077,IT077,stress,PYE,Gentamicin sulfate salt,3,65,31,23,23,9
+Caulo_ML2_set3.IT013,IT013,stress,PYE,Gentamicin sulfate salt,6,62,25,25,16,9
+Caulo_ML2_set4.IT036,IT036,stress,PYE,Lomefloxacin hydrochloride,1,27,12,13,6,9
+Caulo_ML2_set3.IT062,IT062,stress,PYE,Lomefloxacin hydrochloride,2,35,16,19,9,9
+Caulo_ML2_set4.IT035,IT035,stress,PYE,MreB Perturbing Compound A22,2,75,36,37,32,9
+Caulo_ML2_set3.IT061,IT061,stress,PYE,MreB Perturbing Compound A22,4,69,36,36,32,9
+Caulo_ML2_set3.IT076,IT076,stress,PYE,Nalidixic acid sodium salt,4,16,7,8,7,9
+Caulo_ML2_set3.IT075,IT075,stress,PYE,Nalidixic acid sodium salt,12,58,27,26,22,9
+Caulo_ML2_set3.IT074,IT074,stress,PYE,Nalidixic acid sodium salt,5,69,32,32,27,9
+Caulo_ML2_set3.IT012,IT012,stress,PYE,Nalidixic acid sodium salt,1,23,13,9,5,9
+Caulo_ML2_set3.IT011,IT011,stress,PYE,Nalidixic acid sodium salt,10,45,19,25,21,9
+Caulo_ML2_set3.IT010,IT010,stress,PYE,Nalidixic acid sodium salt,3,65,30,33,27,9
+Caulo_ML2_set3.IT080,IT080,stress,PYE,Nickel (II) chloride hexahydrate,2,47,26,28,19,9
+Caulo_ML2_set3.IT079,IT079,stress,PYE,Nickel (II) chloride hexahydrate,6,79,40,42,32,9
+Caulo_ML2_set3.IT016,IT016,stress,PYE,Nickel (II) chloride hexahydrate,4,47,28,23,19,9
+Caulo_ML2_set3.IT015,IT015,stress,PYE,Nickel (II) chloride hexahydrate,3,76,40,43,32,9
+Caulo_ML2_set3.IT024,IT024,stress,PYE,Paraquat dichloride,1,61,25,26,18,9
+Caulo_ML2_set3.IT088,IT088,stress,PYE,Paraquat dichloride,3,57,26,28,20,9
+Caulo_ML2_set3.IT023,IT023,stress,PYE,Paraquat dichloride,4,53,29,20,12,9
+Caulo_ML2_set3.IT087,IT087,stress,PYE,Paraquat dichloride,1,64,28,28,25,9
+Caulo_ML2_set4.IT027,IT027,stress,PYE,Phosphomycin disodium salt,0,9,7,8,6,9
+Caulo_ML2_set4.IT026,IT026,stress,PYE,Phosphomycin disodium salt,14,50,20,13,17,9
+Caulo_ML2_set3.IT052,IT052,stress,PYE,Phosphomycin disodium salt,14,53,24,20,21,9
+Caulo_ML2_set3.IT053,IT053,stress,PYE,Phosphomycin disodium salt,2,36,12,8,8,9
+Caulo_ML2_set3.IT041,IT041,stress,PYE,Polymyxin B sulfate,0,26,16,11,8,9
+Caulo_ML2_set3.IT040,IT040,stress,PYE,Polymyxin B sulfate,2,56,24,24,21,9
+Caulo_ML2_set4.IT015,IT015,stress,PYE,Polymyxin B sulfate,1,9,5,4,5,9
+Caulo_ML2_set4.IT014,IT014,stress,PYE,Polymyxin B sulfate,1,41,19,21,14,9
+Caulo_ML2_set3.IT035,IT035,stress,PYE,Sisomicin sulfate salt,2,62,26,28,24,9
+Caulo_ML2_set4.IT009,IT009,stress,PYE,Sisomicin sulfate salt,2,67,28,34,29,9
+Caulo_ML2_set4.IT010,IT010,stress,PYE,Sodium Chlorate,2,74,34,38,36,9
+Caulo_ML2_set3.IT036,IT036,stress,PYE,Sodium Chlorate,5,69,31,33,27,9
+Caulo_ML2_set4.IT016,IT016,stress,PYE,Sodium Chloride,2,61,25,29,21,9
+Caulo_ML2_set3.IT042,IT042,stress,PYE,Sodium Chloride,1,58,23,28,20,9
+Caulo_ML2_set3.IT037,IT037,stress,PYE,Sodium Chlorite,1,75,36,32,32,9
+Caulo_ML2_set4.IT011,IT011,stress,PYE,Sodium Chlorite,0,73,35,32,27,9
+Caulo_ML2_set4.IT008,IT008,stress,PYE,Sodium nitrate,0,62,27,30,19,9
+Caulo_ML2_set3.IT034,IT034,stress,PYE,Sodium nitrate,0,64,26,31,26,9
+Caulo_ML2_set3.IT031,IT031,stress,PYE,Sodium nitrite,3,70,30,30,28,9
+Caulo_ML2_set3.IT032,IT032,stress,PYE,Sodium nitrite,1,70,32,23,28,9
+Caulo_ML2_set4.IT005,IT005,stress,PYE,Sodium nitrite,1,76,33,34,30,9
+Caulo_ML2_set4.IT006,IT006,stress,PYE,Sodium nitrite,1,67,28,27,28,9
+Caulo_ML2_set4.IT007,IT007,stress,PYE,Sodium nitrite,2,53,20,15,13,9
+Caulo_ML2_set3.IT033,IT033,stress,PYE,Sodium nitrite,2,56,23,19,24,9
+Caulo_ML2_set4.IT013,IT013,stress,PYE,Sodium perchlorate monohydrate,2,69,33,33,30,9
+Caulo_ML2_set3.IT039,IT039,stress,PYE,Sodium perchlorate monohydrate,1,72,33,28,30,9
+Caulo_ML2_set3.IT038,IT038,stress,PYE,Sodium perchlorate monohydrate,4,71,35,33,29,9
+Caulo_ML2_set4.IT012,IT012,stress,PYE,Sodium perchlorate monohydrate,2,66,36,34,28,9
+Caulo_ML2_set3.IT005,IT005,stress,PYE,Spectinomycin dihydrochloride pentahydrate,1,65,34,35,27,9
+Caulo_ML2_set3.IT070,IT070,stress,PYE,Spectinomycin dihydrochloride pentahydrate,1,52,23,25,12,9
+Caulo_ML2_set3.IT069,IT069,stress,PYE,Spectinomycin dihydrochloride pentahydrate,1,72,31,31,27,9
+Caulo_ML2_set3.IT006,IT006,stress,PYE,Spectinomycin dihydrochloride pentahydrate,3,66,30,33,24,9
+Caulo_ML2_set3.IT003,IT003,stress,PYE,Tetracycline hydrochloride,3,64,31,31,23,9
+Caulo_ML2_set3.IT067,IT067,stress,PYE,Tetracycline hydrochloride,2,71,38,35,29,9
+Caulo_ML2_set3.IT068,IT068,stress,PYE,Tetracycline hydrochloride,3,73,31,30,22,9
+Caulo_ML2_set3.IT004,IT004,stress,PYE,Tetracycline hydrochloride,2,71,36,32,23,9
+Caulo_ML2_set3.IT026,IT026,stress,PYE,Thallium(I) acetate,2,51,22,23,19,9
+Caulo_ML2_set3.IT090,IT090,stress,PYE,Thallium(I) acetate,2,48,29,26,19,9
+Caulo_ML2_set3.IT089,IT089,stress,PYE,Thallium(I) acetate,3,68,34,39,27,9
+Caulo_ML2_set3.IT025,IT025,stress,PYE,Thallium(I) acetate,3,70,33,30,29,9
+Caulo_ML2_set3.IT059,IT059,stress,PYE,Vancomycin Hydrochloride Hydrate,1,53,32,26,24,9
+Caulo_ML2_set3.IT060,IT060,stress,PYE,Vancomycin Hydrochloride Hydrate,3,19,14,8,7,9
+Caulo_ML2_set4.IT033,IT033,stress,PYE,Vancomycin Hydrochloride Hydrate,0,57,25,29,17,9
+Caulo_ML2_set4.IT034,IT034,stress,PYE,Vancomycin Hydrochloride Hydrate,0,10,5,7,4,9
+Caulo_ML2_set3.IT051,IT051,stress,PYE,benzoic acid,2,66,26,29,25,9
+Caulo_ML2_set4.IT025,IT025,stress,PYE,benzoic acid,2,62,27,31,21,9
+Caulo_ML2_set3.IT019,IT019,stress,PYE,copper (II) chloride dihydrate,1,64,30,34,28,9
+Caulo_ML2_set3.IT083,IT083,stress,PYE,copper (II) chloride dihydrate,0,64,31,33,23,9
+Caulo_ML2_set3.IT084,IT084,stress,PYE,sodium fluoride,3,76,39,40,32,9
+Caulo_ML2_set3.IT020,IT020,stress,PYE,sodium fluoride,2,76,39,36,34,9
+Caulo_ML2_set3.IT021,IT021,stress,PYE,sodium fluoride,3,64,31,33,25,9
+Caulo_ML2_set3.IT022,IT022,stress,PYE,sodium fluoride,6,67,30,36,27,9
+Caulo_ML2_set3.IT086,IT086,stress,PYE,sodium fluoride,1,70,34,35,27,9
+Caulo_ML2_set3.IT085,IT085,stress,PYE,sodium fluoride,3,72,37,35,34,9

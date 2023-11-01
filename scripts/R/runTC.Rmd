@@ -1,0 +1,133 @@
+```{r}
+suppressWarnings(suppressMessages(library(tidyverse)))
+suppressWarnings(suppressMessages(library(nnet)))
+source("create_Yknockoff_para.R")
+source("stat_modelY_classification_coef.R")
+```
+
+
+#  Extract genes which are CB,CE and CD ( Data subsetting)
+```{r}
+metaData <- read.table("RESULTS_FDR_LASTLEVELONLY.TAB",header=TRUE)
+newData <- metaData[ which(metaData$Annotation_TC=="Conditionally_Beneficial"
+                         | metaData$Annotation_TC =="Conditionally_Detrimental" |
+                           metaData$Annotation_TC=="Conditionally_Essential"), ]
+genes <- newData$locus_tag
+```
+
+# Batch corrected reads subsetted to CB,CE and CD genes
+
+```{r}
+dft <- read.table("TC_mid_batchcorrected_dclpb_included.tsv",sep = '\t',header=TRUE)%>%select(-batch,-N)%>%group_by(locus_tag,strain,condition,slevel,rep,time)
+#subset
+df <- dft %>% filter(locus_tag %in% newData$locus_tag)%>%summarise(mean_tncnt=mean(tncnt))%>%pivot_wider(names_from = locus_tag,values_from = mean_tncnt)
+#genes
+genesT <- as.data.frame(lapply(df[, 6:dim(df)[2]], unlist))
+```
+
+
+```{r}
+condNoneSlevelNoneInd <- intersect(which(df$slevel=="none"), which(df$condition=="none"))
+timeZeroInd <- which(df$time==0)
+condSlevelNoneTime0 <- intersect(timeZeroInd, condNoneSlevelNoneInd)
+basedfu <- df[condSlevelNoneTime0,]
+basedfu2 <- basedfu%>%group_by(strain,condition,slevel)%>%summarise_all(mean)#%>%filter(strain!='DCLPB')
+basedfu2$rep <- 4
+basedfu3 <- basedfu2 %>% slice(rep(1:n(), each = 4))
+basedfu3$rep <- rep(c(1,2,3,4), 5)
+basedfufill <- rbind(basedfu,basedfu2)%>%arrange(strain,condition,slevel,rep)
+dfuNoTime0 <- df[-condSlevelNoneTime0, ]
+### since the base data only have three replications, we change the base level as the average
+dat1 <- basedfufill%>%pivot_longer(col=-(1:5),names_to = 'gene',values_to = 'basecount')%>%mutate(Type='base',count=basecount)
+dat2 <- dfuNoTime0%>%pivot_longer(col=-(1:5),names_to = 'gene',values_to = 'count')%>%mutate(Type='Condition')
+dat3 <-dat1%>%full_join(dat2)%>%group_by(strain,gene,rep)%>%fill(basecount)
+dat3$basecount <- dat3$basecount + 1
+dat3$count <- dat3$count + 1
+dat4 <-dat3%>%mutate(ratio=count/basecount)%>%filter(Type=='Condition')%>%select(-Type,-count,-basecount)
+dat4$logratio <- log(dat4$ratio)
+dat5 <- dat4%>%pivot_wider(id_cols = 1:5,names_from = gene,values_from = logratio)
+```
+
+
+```{r}
+wildtype <- dat5 %>%filter(strain=="wild-type")
+dlon <- dat5 %>% filter(strain=="DLON")
+dclpa <- dat5 %>% filter(strain=="DCLPA")
+dnak <- dat5 %>% filter(strain=="dnak-dnaJ")
+dclpb <- dat5 %>% filter(strain=="DCLPB")
+wildMtx <- as.matrix(wildtype[ , 6:dim(wildtype)[2]])
+dlonMtx <- as.matrix(dlon[, 6:dim(dlon)[2]])
+dclpaMtx <- as.matrix(dclpa[, 6:dim(dclpa)[2]])
+dnakMtx <- as.matrix(dnak[, 6:dim(dnak)[2]])
+dclpbMtx <- as.matrix(dclpb[, 6:dim(dclpb)[2]])
+```
+
+```{r}
+logRatioKnockoffParamWildAdjusted = create_Yknockoff_para(wildMtx, "sdp", shrink=TRUE)
+save(logRatioKnockoffParamWildAdjusted, file="logRatioKnockoffParamWildWholeAdjusted.Rdata")
+logRatioKnockoffParamDlonAdjusted = create_Yknockoff_para(dlonMtx, "sdp", shrink=TRUE)
+save(logRatioKnockoffParamDlonAdjusted, file="logRatioKnockoffParamDlonWholeAdjusted.Rdata")
+logRatioKnockoffParamDclpaAdjusted = create_Yknockoff_para(dclpaMtx, "sdp", shrink=TRUE)
+save(logRatioKnockoffParamDclpaAdjusted, file="logRatioKnockoffParamDclpaWholeAdjusted.Rdata")
+logRatioKnockoffParamdnakAdjusted = create_Yknockoff_para(dnakMtx, "sdp", shrink=TRUE)
+save(logRatioKnockoffParamdnakAdjusted, file="logRatioKnockoffParamdnakWholeAdjusted.Rdata")
+logRatioKnockoffParamdclpbAdjusted = create_Yknockoff_para(dclpbMtx, "sdp", shrink=TRUE)
+save(logRatioKnockoffParamdclpbAdjusted, file="logRatioKnockoffParamdclpbWholeAdjusted.Rdata")
+```
+
+
+
+```{r}
+logRatioKnockoffWild = generateMultiKnockoff(wildMtx, 
+                                             logRatioKnockoffParamWildAdjusted$mu_k, 
+                                             logRatioKnockoffParamWildAdjusted$Sigma_k,n=1000)
+wildtype$condition <- relevel(factor(wildtype$condition), ref="none")
+dlon$condition <- relevel(factor(dlon$condition), ref="none")
+dclpa$condition <- relevel(factor(dclpa$condition), ref="none")
+dnak$condition <- relevel(factor(dnak$condition), ref="none")
+dclpb$condition <- relevel(factor(dclpb$condition), ref="none")
+
+resultInd <- vector(mode = "list", length = 1000)
+resultNames <-  vector(mode = "list", length = 1000)
+
+selectVar <- function(subdf, resdf, knockoffdf){
+  for(i in 1:1000){
+    print(i)
+    Yfeatures = cbind(subdf, knockoffdf[[i]])
+    Z = stat_modelY_classification_coef(resdf$condition, Yfeatures)
+    Z = abs(Z)
+    Z= Z/max(Z)
+    r = ncol(Yfeatures)/2
+    orig = 1:r
+    W = abs(Z[orig]) - abs(Z[orig+r])
+    #plot(W)
+    tau_max = knockoff.threshold(W, fdr = 0.1, offset = 0)
+    S_max = (which(W>tau_max))
+    varNames = colnames(wildMtx)[S_max]
+    resultInd[[i]] = S_max
+    resultNames[[i]] = varNames
+  }
+  result = list(resultInd=resultInd, resultNames=resultNames)
+  return(result)
+}
+
+selectVarFreq <- function(result){
+  countInd = sort(table(unlist(lapply(result$resultInd, unique))), decreasing=TRUE)
+  countNames = sort(table(unlist(lapply(result$resultNames, unique))), decreasing=TRUE)
+  selectGenes = names(countNames)[as.numeric(countNames)>100]
+  selectInd = countNames[as.numeric(countNames)>100]
+  output = list(selectGenes=selectGenes, selectInd=selectInd)
+  return(output)
+}
+
+wildResult <- selectVar(wildMtx, wildtype,logRatioKnockoffWild)
+wildSelect <- selectVarFreq(wildResult)
+wildSelect$selectGenes
+
+selectDF <- cbind(wildtype[, 1:5], wildtype[,names(wildSelect$selectInd)])
+#wildHigh = selectDF %>% filter(strain=="wild-type" && slevel=="HIGH")
+wildHigh <- selectDF %>% filter(strain=="wild-type"&condition!="none")
+wildHigh <- wildHigh %>%  unite("Pert", condition:slevel, remove = FALSE)
+wildhigh_long <- wildHigh%>%pivot_longer(-(1:6))
+```
+

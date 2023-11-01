@@ -1,0 +1,7 @@
+locus_tag,Gene_Name,Description,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
+CCNA_00001,CCNA_00001,ATP/GTP-binding protein;protein_id=YP_002515376.1;,0,1,0,1,0,1,1,1,1,1,1,1,0,0,1
+CCNA_00002,CCNA_00002,septum formation protein Maf;protein_id=YP_002515377.1;,1,1,1,1,1,1,0,1,0,1,0,1,0,0,0
+CCNA_00003,CCNA_00003,shikimate 5-dehydrogenase;protein_id=YP_002515378.1;,1,1,1,1,1,0,0,1,1,1,1,0,0,1,1
+CCNA_00006,CCNA_00006,enoyl-CoA hydratase;protein_id=YP_002515381.1;,1,1,0,0,1,0,1,1,0,1,0,1,0,0,1
+CCNA_00009,alkB,,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0
+CCNA_00011,dnaJ,chaperone protein DnaJ;protein_id=YP_002515386.1;,0,0,1,1,1,0,0,1,1,1,1,1,0,1,0
