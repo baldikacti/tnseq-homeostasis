@@ -5,6 +5,8 @@ rule genomecov:
         config["results"] + "bwa_aln/{smp}_marked.bam"
     output:
         config["results"] + "mapped/{smp}_count.txt"
+    conda:
+        "envs/environment.yaml"
     shell:
         "bedtools genomecov -5 -bg -ibam {input} > {output}"
 
@@ -16,6 +18,8 @@ rule mapping_totalcounts:
         ct= config["results"] + "mapped/{smp}_count.txt"
     output:
         config["results"] + "mapped/{smp}_middle_totalsum.txt"
+    conda:
+        "envs/environment.yaml"
     shell:
         "bedtools map -a {input.ref} -b {input.ct} -c 4 -o sum > {output}"
 
@@ -27,6 +31,8 @@ rule mapping_full_totalcounts:
         ct= config["results"] + "mapped/{smp}_count.txt"
     output:
         config["results"] + "mapped/{smp}_full_totalsum.txt"
+    conda:
+        "envs/environment.yaml"
     shell:
         "bedtools map -a {input.ref} -b {input.ct} -c 4 -o sum > {output}"
 
@@ -38,6 +44,8 @@ rule mapping_uniquecounts:
         ct= config["results"] + "mapped/{smp}_count.txt"
     output:
         config["results"] + "mapped/{smp}_middle_uniquesum.txt"
+    conda:
+        "envs/environment.yaml"
     shell:
         "bedtools map -a {input.ref} -b {input.ct} -c 4 -o count > {output}"
 
@@ -50,6 +58,6 @@ rule mapping_full_uniquecounts:
     output:
         config["results"] + "mapped/{smp}_full_uniquesum.txt"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     shell:
         "bedtools map -a {input.ref} -b {input.ct} -c 4 -o count > {output}"

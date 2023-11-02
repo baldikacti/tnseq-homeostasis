@@ -19,7 +19,7 @@ The pipeline will perform the following steps:
 2. Removes PCR duplicates using UMIs. ([`JE`](https://github.com/gbcs-embl/Je))
 3. Align reads to reference genome. ([`BWA-MEM`](https://github.com/lh3/bwa/))
 4. Generates BigWig files for visualization in genome browsers ([`deeptools`](https://deeptools.readthedocs.io/en/develop/))
-5. Assigns 5' position to counts. ([`bedtools genomocov`](https://bedtools.readthedocs.io/en/latest/content/tools/genomecov.html))
+5. Assigns 5' position to counts. ([`bedtools genomecov`](https://bedtools.readthedocs.io/en/latest/content/tools/genomecov.html))
 6. Maps position counts to gene features using either clipped or full sized genes. ([`bedtools map`](https://bedtools.readthedocs.io/en/latest/content/tools/map.html))
 7. Creates tab-separated count files.
 

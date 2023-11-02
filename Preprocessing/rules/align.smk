@@ -7,7 +7,7 @@ rule bwa_mem:
     output:
         config["results"] + "bwa_aln/{smp}.bam"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     threads: 4
     shell:
         "bwa mem -t {threads} {input.fa} {input.fq} | samtools sort -@2 - > {output}"
@@ -22,6 +22,6 @@ rule rm_dupe:
         bam = config["results"] + "bwa_aln/{smp}_marked.bam",
         metrics = config["results"] + "bwa_aln/dedup_metrics/{smp}_metrics.txt"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     shell:
         "java -jar {input.je} markdupes I={input.bam} O={output.bam} M={output.metrics} MM=0 REMOVE_DUPLICATES=TRUE"
