@@ -9,7 +9,7 @@ rule clip:
     params:
         outdir = config["results"] + "preprocess"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     shell:
         "java -jar {input.je} clip F1={input.data} LEN=6 O={params.outdir}"
 
@@ -21,7 +21,7 @@ rule seqkit_grep:
     output:
         config["results"] + "preprocess/{smp}_pruned.fq.gz"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     threads: 4
     shell:
         "zcat < {input} | seqkit grep --threads {threads} --by-seq --ignore-case --pattern TGTATAAGAG -o {output}"

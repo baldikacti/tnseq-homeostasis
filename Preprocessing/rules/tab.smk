@@ -6,6 +6,8 @@ rule tab_generate_totalcounts:
         data = config["results"] + "mapped/{smp}_middle_totalsum.txt"
     output:
         config["results"] + "read_counts/totalcounts_mid/{smp}.totalcounts.tab"
+    conda:
+        "envs/environment.yaml"
     shell:
         "Rscript {input.script} --data {input.data} --out {output}"
 
@@ -17,6 +19,8 @@ rule tab_generate_full_totalcounts:
         data = config["results"] + "mapped/{smp}_full_totalsum.txt"
     output:
         config["results"] + "read_counts/totalcounts_full/{smp}.totalcounts.tab"
+    conda:
+        "envs/environment.yaml"
     shell:
         "Rscript {input.script} --data {input.data} --out {output}"
 
@@ -29,7 +33,7 @@ rule tab_generate_uniquecounts:
     output:
         config["results"] + "read_counts/uniquecounts_mid/{smp}.uniquecounts.tab"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     shell:
         "Rscript {input.script} --data {input.data} --out {output}"
 
@@ -42,6 +46,6 @@ rule tab_generate_full_uniquecounts:
     output:
         config["results"] + "read_counts/uniquecounts_full/{smp}.uniquecounts.tab"
     conda:
-        "envs/environement.yaml"
+        "envs/environment.yaml"
     shell:
         "Rscript {input.script} --data {input.data} --out {output}"
