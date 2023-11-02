@@ -1,0 +1,16 @@
+name: chienlab-tnseq
+channels:
+  - default
+  - conda-forge
+  - bioconda
+dependencies:
+  - bioconda::snakemake-minimal =7.32.4
+  - conda-forge::python =3.9
+  - bioconda::deeptools=3.5.4
+  - bioconda::seqkit =2.5.1
+  - bioconda::samtools =1.18
+  - bioconda::bwa =0.7.17
+  - bioconda::bedtools =2.31.0
+  - openjdk
+  - conda-forge::r-base =4.3.1
+  - conda-forge::r-optparse =1.7.3

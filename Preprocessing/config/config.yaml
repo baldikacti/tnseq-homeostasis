@@ -1,0 +1,8 @@
+fastq: "data/test/"
+results: "results/test/"
+env: "envs/environment.yaml"
+ref:
+  fasta: "references/NC_011916.fasta"
+  map_mid: "references/CCNA_mid_bedfile.txt"
+  map_full: "references/CCNA_bedfile.txt"
+script: "bin/"
