@@ -12,8 +12,12 @@ date;hostname;pwd
 
 module load miniconda/22.11.1-1
 
+# Activate conda environment
+
+conda activate chienlab-tnseq
+
 # Run pipeline with all available cores
 # Empty --cores argument defaults to all available cores
-snakemake all --use-conda --cores
+snakemake all --cores
 
 date

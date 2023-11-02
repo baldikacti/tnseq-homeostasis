@@ -6,8 +6,6 @@ rule bam2bw:
     output:
         bw = config["results"] + "bigwig/{smp}.bw",
         bai = config["results"] + "bwa_aln/{smp}_marked.bam.bai"
-    conda:
-        "envs/environment.yaml"
     threads: 2
     shell:
         """

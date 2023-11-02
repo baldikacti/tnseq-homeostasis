@@ -29,7 +29,7 @@ You will need to install [`Conda`](https://docs.conda.io/en/latest/) package man
 
 1. Open terminal and clone repository
 ```
-git clone https://github.com/baldikacti/tnseq-homeostasis.git
+git clone https://github.com/flahertylab/tnseq-homeostasis.git
 ```
 
 2. Change working directory to Preprocessing
@@ -37,7 +37,13 @@ git clone https://github.com/baldikacti/tnseq-homeostasis.git
 cd tnseq-homeostasis/Preprocessing
 ```
 
-3. Open `config/config.yaml` in your favorite text editor. 
+3. Create and activate the conda environment
+```
+conda env create -f envs/environment.yaml
+conda activate chienlab-tnseq
+```
+
+4. Open `config/config.yaml` in your favorite text editor. 
 
 Change the `fastq: "data/test/"` paramater to the directory that contains your fastq files
 
@@ -47,10 +53,10 @@ It is important to keep the forward slashed at the end of directory paths.
 
 The config file contains parameters for fasta and bed formatted gene feature references. Change those as needed for different organisms.
 
-4. Run the pipeline with select number of cores.
+5. Run the pipeline with select number of cores.
 
 ```
-snakemake --cores 8
+snakemake --use-conda --cores 8
 ```
 
 ## Outputs
