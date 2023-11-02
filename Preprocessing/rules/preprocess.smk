@@ -8,8 +8,6 @@ rule clip:
         config["results"] + "preprocess/{smp}_clipped.fq.gz"
     params:
         outdir = config["results"] + "preprocess"
-    conda:
-        "envs/environment.yaml"
     shell:
         "java -jar {input.je} clip F1={input.data} LEN=6 O={params.outdir}"
 
@@ -20,8 +18,6 @@ rule seqkit_grep:
         config["results"] + "preprocess/{smp}_clipped.fq.gz"
     output:
         config["results"] + "preprocess/{smp}_pruned.fq.gz"
-    conda:
-        "envs/environment.yaml"
     threads: 4
     shell:
         "zcat < {input} | seqkit grep --threads {threads} --by-seq --ignore-case --pattern TGTATAAGAG -o {output}"
